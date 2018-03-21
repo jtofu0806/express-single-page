@@ -1,26 +1,15 @@
-## Usage
-
-### Build
+## Prerequisite
 
 Use express-generator with no view engine config
 ```
 express --no-view my-project
 ```
 
+## Usage
+
 ### Start express (PORT=8080)
 ```
 npm start
-```
-
-## Configuration
-
-### Routing
-
-Currently, put the static pages into ```/public``` folder, and the start page is ```/public/index.html```.
-```javascript
-app.use(function (req, res, next) {
-    res.sendFile(__dirname + '/public/index.html');
-});
 ```
 
 ### PORT
@@ -45,4 +34,15 @@ NODE_ENV=production node ./bin/www
 **windows cmd**
 ```cmd
 set NODE_ENV=production && node ./bin/www
+```
+
+## Configuration
+
+### Routing
+
+Currently, static resources would be placed into ```/public``` folder under the root, and the start page is ```/public/index.html```.
+```javascript
+app.use(function (req, res, next) {
+    res.sendFile(__dirname + '/public/index.html');
+});
 ```
