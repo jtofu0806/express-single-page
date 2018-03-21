@@ -1,0 +1,1 @@
+set NODE_ENV=production && set PORT=8080 && node ./bin/www
